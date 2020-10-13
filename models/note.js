@@ -41,5 +41,5 @@ noteSchema.set('toJSON', {
     delete returnedObject.__v
   }
 })
-
+//What's the delete returnedObject.__v mean?
 module.exports = mongoose.model('Note', noteSchema)
