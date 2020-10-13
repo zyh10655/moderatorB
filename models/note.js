@@ -24,7 +24,16 @@ const noteSchema = new mongoose.Schema({
   },
   accept: Boolean
 })
-
+// There are some sample data if u use:
+// article{Janzen:2008fx,
+// author = {{Janzen, D S} and {Saiedian, H}},
+// title = {{Does Test-Driven Development Really Improve Software Design Quality?}},
+// journal = {Software, IEEE},
+// year = {2008},
+// volume = {25},
+// number = {2},
+// pages = {77--84}
+// }
 noteSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
