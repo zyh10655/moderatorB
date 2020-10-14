@@ -8,6 +8,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     console.log('connected to MongoDB')
   })
+//In the following error reporting, we may want to add a numbering, such as 1123Error connecting to MongoDB, in order to better separate this and other errors
   .catch((error) => {
     console.log('error connecting to MongoDB:', error.message)
   })
