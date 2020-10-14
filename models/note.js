@@ -3,7 +3,7 @@ mongoose.set('useFindAndModify', false)
 const url = process.env.MONGODB_URI
 
 console.log('connecting to', url)
-
+// url example:mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     console.log('connected to MongoDB')
@@ -11,7 +11,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((error) => {
     console.log('error connecting to MongoDB:', error.message)
   })
-
+// How about using sql server to create entities relationship database?
 const noteSchema = new mongoose.Schema({
   content: {
     type: String,
