@@ -6,10 +6,10 @@ console.log('connecting to', url)
 // url example:mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
-    console.log('connected to MongoDB')
+    console.log('Connected to MongoDB')
   })
   .catch((error) => {
-    console.log('error connecting to MongoDB:', error.message)
+    console.log('Error connecting to MongoDB:', error.message)
   })
 // How about using sql server to create entities relationship database?
 const noteSchema = new mongoose.Schema({
