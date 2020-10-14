@@ -12,6 +12,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     console.log('error connecting to MongoDB:', error.message)
   })
 // How about using sql server to create entities relationship database?
+// When there is a lot of content, is the minimum length 5 not enough?
 const noteSchema = new mongoose.Schema({
   content: {
     type: String,
